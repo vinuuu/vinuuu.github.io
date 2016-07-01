@@ -1,0 +1,378 @@
+<section id="page-breadcrumb">
+    <div class="vertical-center sun">
+        <div class="container">
+            <div class="row">
+                <div class="action">
+                    <div class="col-sm-12">
+                        <h1 class="title">Our Own InstaGram</h1>
+                        <p>Be Creative</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!--/#page-breadcrumb-->
+
+<section id="projects" class="padding-top">
+    <div class="container">
+        <div class="row">
+            <div ngf-select ngf-multiple="true" ngf-include-dir="true" ng-model="files" class="drop-box pull-right">
+                <span class="link">Select </span></div>
+            <div ngf-drop ngf-multiple="true" ng-model="files" class="drop-box pull-right">
+                <span> Paste or Drop Image from browser</span></div>
+        </div>
+        <div class="row">
+            <div class="preview">
+                <div ng-show="files.length>0">Now</div>
+                <img ngf-src="r" ng-repeat="r in files">
+                <!--<audio controls ngf-src="!files[0].$error && files[0]"></audio>
+            <video controls ngf-src="!files[0].$error && files[0]"></video>-->
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-3 col-sm-4">
+                <div class="sidebar portfolio-sidebar">
+                    <div class="sidebar-item categories">
+                        <h3>Project Categories</h3>
+                        <ul class="nav navbar-stacked">
+                            <!--<li><a href="#/">Branded<span class="pull-right">(1)</span></a></li>
+                            <li class="active"><a href="#/">Design<span class="pull-right">(8)</span></a></li>
+                            <li><a href="#/">Folio<span class="pull-right">(4)</span></a></li>
+                            <li><a href="#/">Logos<span class="pull-right">(9)</span></a></li>
+                            <li><a href="#/">Mobile<span class="pull-right">(3)</span></a></li>
+                            <li><a href="#/">Mockup<span class="pull-right">(4)</span></a></li>
+                            <li><a href="#/">Php<span class="pull-right">(2)</span></a></li>
+                            <li><a href="#/">Wordpress<span class="pull-right">(8)</span></a></li>-->
+                            <li class="active" ng-repeat="li in TotalDirectories"><a ng-click="MainFolderClick(li)">{{li}}</li>
+                        </ul>
+                    </div>
+                    <div class="sidebar-item hidden  recent">
+                        <h3>Recent Projects</h3>
+                        <div class="media">
+                            <div class="pull-left">
+                                <a href="#/"><img src="images/portfolio/project1.jpg" alt=""></a>
+                            </div>
+                            <div class="media-body">
+                                <h4><a href="#/">Lorem ipsum dolor sit amet consectetur adipisicing elit,</a></h4>
+                                <p>posted on 07 March 2014</p>
+                            </div>
+                        </div>
+                        <div class="media">
+                            <div class="pull-left">
+                                <a href="#/"><img src="images/portfolio/project2.jpg" alt=""></a>
+                            </div>
+                            <div class="media-body">
+                                <h4><a href="#/">Lorem ipsum dolor sit amet consectetur adipisicing elit,</a></h4>
+                                <p>posted on 07 March 2014</p>
+                            </div>
+                        </div>
+                        <div class="media">
+                            <div class="pull-left">
+                                <a href="#/"><img src="images/portfolio/project3.jpg" alt=""></a>
+                            </div>
+                            <div class="media-body">
+                                <h4><a href="#/">Lorem ipsum dolor sit amet consectetur adipisicing elit,</a></h4>
+                                <p>posted on 07 March 2014</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="sidebar-item hidden popular">
+                        <h3>Popular Projects</h3>
+                        <ul class="gallery">
+                            <li>
+                                <a href="#/"><img src="images/portfolio/popular1.jpg" alt=""></a>
+                            </li>
+                            <li>
+                                <a href="#/"><img src="images/portfolio/popular2.jpg" alt=""></a>
+                            </li>
+                            <li>
+                                <a href="#/"><img src="images/portfolio/popular3.jpg" alt=""></a>
+                            </li>
+                            <li>
+                                <a href="#/"><img src="images/portfolio/popular4.jpg" alt=""></a>
+                            </li>
+                            <li>
+                                <a href="#/"><img src="images/portfolio/popular5.jpg" alt=""></a>
+                            </li>
+                            <li>
+                                <a href="#/"><img src="images/portfolio/popular1.jpg" alt=""></a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-9 col-sm-8">
+                <div class="row">
+                    <div class="portfolio-items">
+                        <div ng-repeat="Parentitem in DirectoryData">
+                            </br>
+                            <h2>{{Parentitem.DirectoryName|dateAgo}}</h2>
+                            <div class="col-xs-6 col-sm-4 col-md-3 portfolio-item branded logos" ng-repeat="data in Parentitem.Data">
+                                <div class="portfolio-wrapper">
+                                    <div class="portfolio-single">
+                                        <div class="portfolio-thumb">
+                                            <img src="{{data|pathChanger}}" class="img-responsive img-circle" alt="" style="width:150px;height:150px;">
+                                        </div>
+                                        <div class="portfolio-view">
+                                            <ul class="nav nav-pills">
+                                                <!--<li><a href="portfolio-details.html"><i class="fa fa-link"></i></a></li>-->
+                                                <li><a href="{{data|pathChanger}}" data-lightbox="example-set"><i class="fa fa-eye"></i></a></li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                    <div class="portfolio-info ">
+                                        <h2></h2>
+                                    </div>
+                                </div>
+                            </div></div>
+                            <button ng-show="nodata" class="btn btn-warning pull-right" ng-click="AddMore()"><i style="font-size:25px;" class="fa fa-cloud-download fa-5" aria-hidden="true"></i></button>
+
+                        <!--<div class="col-xs-6 col-sm-6 col-md-4 portfolio-item branded logos">
+                            <div class="portfolio-wrapper">
+                                <div class="portfolio-single">
+                                    <div class="portfolio-thumb">
+                                        <img src="images/portfolio/1.jpg" class="img-responsive" alt="">
+                                    </div>
+                                    <div class="portfolio-view">
+                                        <ul class="nav nav-pills">
+                                            <li><a href="portfolio-details.html"><i class="fa fa-link"></i></a></li>
+                                            <li><a href="images/portfolio/1.jpg" data-lightbox="example-set"><i class="fa fa-eye"></i></a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div class="portfolio-info ">
+                                    <h2>Sailing Vivamus</h2>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-xs-6 col-sm-6 col-md-4 portfolio-item branded folio">
+                            <div class="portfolio-wrapper">
+                                <div class="portfolio-single">
+                                    <div class="portfolio-thumb">
+                                        <img src="images/portfolio/2.jpg" class="img-responsive" alt="">
+                                    </div>
+                                    <div class="portfolio-view">
+                                        <ul class="nav nav-pills">
+                                            <li><a href="portfolio-details.html"><i class="fa fa-link"></i></a></li>
+                                            <li><a href="images/portfolio/2.jpg" data-lightbox="example-set"><i class="fa fa-eye"></i></a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div class="portfolio-info ">
+                                    <h2>Sailing Vivamus</h2>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-xs-6 col-sm-6 col-md-4 portfolio-item design logos">
+                            <div class="portfolio-wrapper">
+                                <div class="portfolio-single">
+                                    <div class="portfolio-thumb">
+                                        <img src="images/portfolio/3.jpg" class="img-responsive" alt="">
+                                    </div>
+                                    <div class="portfolio-view">
+                                        <ul class="nav nav-pills">
+                                            <li><a href="portfolio-details.html"><i class="fa fa-link"></i></a></li>
+                                            <li><a href="images/portfolio/3.jpg" data-lightbox="example-set"><i class="fa fa-eye"></i></a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div class="portfolio-info ">
+                                    <h2>Sailing Vivamus</h2>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-xs-6 col-sm-6 col-md-4 portfolio-item design logos">
+                            <div class="portfolio-wrapper">
+                                <div class="portfolio-single">
+                                    <div class="portfolio-thumb">
+                                        <img src="images/portfolio/4.jpg" class="img-responsive" alt="">
+                                    </div>
+                                    <div class="portfolio-view">
+                                        <ul class="nav nav-pills">
+                                            <li><a href="portfolio-details.html"><i class="fa fa-link"></i></a></li>
+                                            <li><a href="images/portfolio/4.jpg" data-lightbox="example-set"><i class="fa fa-eye"></i></a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div class="portfolio-info ">
+                                    <h2>Sailing Vivamus</h2>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-xs-6 col-sm-6 col-md-4 portfolio-item branded mobile">
+                            <div class="portfolio-wrapper">
+                                <div class="portfolio-single">
+                                    <div class="portfolio-thumb">
+                                        <img src="images/portfolio/5.jpg" class="img-responsive" alt="">
+                                    </div>
+                                    <div class="portfolio-view">
+                                        <ul class="nav nav-pills">
+                                            <li><a href="portfolio-details.html"><i class="fa fa-link"></i></a></li>
+                                            <li><a href="images/portfolio/5.jpg" data-lightbox="example-set"><i class="fa fa-eye"></i></a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div class="portfolio-info ">
+                                    <h2>Sailing Vivamus</h2>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-xs-6 col-sm-6 col-md-4 portfolio-item branded mockup">
+                            <div class="portfolio-wrapper">
+                                <div class="portfolio-single">
+                                    <div class="portfolio-thumb">
+                                        <img src="images/portfolio/6.jpg" class="img-responsive" alt="">
+                                    </div>
+                                    <div class="portfolio-view">
+                                        <ul class="nav nav-pills">
+                                            <li><a href="portfolio-details.html"><i class="fa fa-link"></i></a></li>
+                                            <li><a href="images/portfolio/6.jpg" data-lightbox="example-set"><i class="fa fa-eye"></i></a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div class="portfolio-info ">
+                                    <h2>Sailing Vivamus</h2>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-xs-6 col-sm-6 col-md-4 portfolio-item branded folio">
+                            <div class="portfolio-wrapper">
+                                <div class="portfolio-single">
+                                    <div class="portfolio-thumb">
+                                        <img src="images/portfolio/7.jpg" class="img-responsive" alt="">
+                                    </div>
+                                    <div class="portfolio-view">
+                                        <ul class="nav nav-pills">
+                                            <li><a href="portfolio-details.html"><i class="fa fa-link"></i></a></li>
+                                            <li><a href="images/portfolio/7.jpg" data-lightbox="example-set"><i class="fa fa-eye"></i></a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div class="portfolio-info ">
+                                    <h2>Sailing Vivamus</h2>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-xs-6 col-sm-6 col-md-4 portfolio-item design logos">
+                            <div class="portfolio-wrapper">
+                                <div class="portfolio-single">
+                                    <div class="portfolio-thumb">
+                                        <img src="images/portfolio/8.jpg" class="img-responsive" alt="">
+                                    </div>
+                                    <div class="portfolio-view">
+                                        <ul class="nav nav-pills">
+                                            <li><a href="portfolio-details.html"><i class="fa fa-link"></i></a></li>
+                                            <li><a href="images/portfolio/8.jpg" data-lightbox="example-set"><i class="fa fa-eye"></i></a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div class="portfolio-info ">
+                                    <h2>Sailing Vivamus</h2>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-xs-6 col-sm-6 col-md-4 portfolio-item branded logos">
+                            <div class="portfolio-wrapper">
+                                <div class="portfolio-single">
+                                    <div class="portfolio-thumb">
+                                        <img src="images/portfolio/9.jpg" class="img-responsive" alt="">
+                                    </div>
+                                    <div class="portfolio-view">
+                                        <ul class="nav nav-pills">
+                                            <li><a href="portfolio-details.html"><i class="fa fa-link"></i></a></li>
+                                            <li><a href="images/portfolio/9.jpg" data-lightbox="example-set"><i class="fa fa-eye"></i></a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div class="portfolio-info ">
+                                    <h2>Sailing Vivamus</h2>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-xs-6 col-sm-6 col-md-4 portfolio-item branded mockup">
+                            <div class="portfolio-wrapper">
+                                <div class="portfolio-single">
+                                    <div class="portfolio-thumb">
+                                        <img src="images/portfolio/10.jpg" class="img-responsive" alt="">
+                                    </div>
+                                    <div class="portfolio-view">
+                                        <ul class="nav nav-pills">
+                                            <li><a href="portfolio-details.html"><i class="fa fa-link"></i></a></li>
+                                            <li><a href="images/portfolio/10.jpg" data-lightbox="example-set"><i class="fa fa-eye"></i></a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div class="portfolio-info ">
+                                    <h2>Sailing Vivamus</h2>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-xs-6 col-sm-6 col-md-4 portfolio-item design folio">
+                            <div class="portfolio-wrapper">
+                                <div class="portfolio-single">
+                                    <div class="portfolio-thumb">
+                                        <img src="images/portfolio/11.jpg" class="img-responsive" alt="">
+                                    </div>
+                                    <div class="portfolio-view">
+                                        <ul class="nav nav-pills">
+                                            <li><a href="portfolio-details.html"><i class="fa fa-link"></i></a></li>
+                                            <li><a href="images/portfolio/11.jpg" data-lightbox="example-set"><i class="fa fa-eye"></i></a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div class="portfolio-info ">
+                                    <h2>Sailing Vivamus</h2>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-xs-6 col-sm-6 col-md-4 portfolio-item design folio">
+                            <div class="portfolio-wrapper">
+                                <div class="portfolio-single">
+                                    <div class="portfolio-thumb">
+                                        <img src="images/portfolio/12.jpg" class="img-responsive" alt="">
+                                    </div>
+                                    <div class="portfolio-view">
+                                        <ul class="nav nav-pills">
+                                            <li><a href="portfolio-details.html"><i class="fa fa-link"></i></a></li>
+                                            <li><a href="images/portfolio/12.jpg" data-lightbox="example-set"><i class="fa fa-eye"></i></a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div class="portfolio-info ">
+                                    <h2>Sailing Vivamus</h2>
+                                </div>
+                            </div>
+                        </div>-->
+                        </div>
+                        <div class="portfolio-pagination hidden">
+                            <ul class="pagination">
+                                <li><a href="#/">left</a></li>
+                                <li><a href="#/">1</a></li>
+                                <li><a href="#/">2</a></li>
+                                <li class="active"><a href="#/">3</a></li>
+                                <li><a href="#/">4</a></li>
+                                <li><a href="#/">5</a></li>
+                                <li><a href="#/">6</a></li>
+                                <li><a href="#/">7</a></li>
+                                <li><a href="#/">8</a></li>
+                                <li><a href="#/">9</a></li>
+                                <li><a href="#/">right</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+</section>
+<!--/#projects-->
+<style>
+    .drop-box {
+        background: #F8F8F8;
+        border: 5px dashed #DDD;
+        width: 170px;
+        text-align: center;
+        padding: 50px 10px;
+        margin-left: 10px;
+    }
+</style>

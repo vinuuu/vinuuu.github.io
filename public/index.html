@@ -1,0 +1,224 @@
+<!doctype html>
+<html class="no-js">
+
+<head>
+    <meta charset="utf-8">
+    <title></title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width">
+    <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
+    <!-- build:css(.) styles/vendor.css -->
+    <!-- bower:css -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/font-awesome.min.css" rel="stylesheet">
+    <link href="css/animate.min.css" rel="stylesheet">
+    <link href="css/lightbox.css" rel="stylesheet">
+    <link href="css/main.css" rel="stylesheet">
+    <link href="css/responsive.css" rel="stylesheet">
+    <link href="css/responsive.css" rel="stylesheet">
+    <!-- <link href="css/custom-styles.css" rel="stylesheet"> -->
+
+
+    <!--[if lt IE 9]>
+        <script src="js/html5shiv.js"></script>
+        <script src="js/respond.min.js"></script>
+    <![endif]-->
+    <link rel="shortcut icon" href="images/ico/favicon.ico">
+    <link rel="apple-touch-icon-precomposed" sizes="144x144" href="images/ico/apple-touch-icon-144-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" sizes="114x114" href="images/ico/apple-touch-icon-114-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" sizes="72x72" href="images/ico/apple-touch-icon-72-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" href="images/ico/apple-touch-icon-57-precomposed.png">
+    <!--    <link rel="stylesheet" type="text/css" href="http://www.shieldui.com/shared/components/latest/css/shieldui-all.min.css" />
+ <link rel="stylesheet" type="text/css" href="http://www.shieldui.com/shared/components/latest/css/light/all.min.css" /> -->
+    <!-- end genearl css -->
+</head>
+
+<body ng-app="bestbuddyApp">
+    <!--[if lt IE 7]>
+      <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+    <![endif]-->
+    <!-- Add your site or application content here -->
+    <div class="header">
+        <ng-include src="'components/navbar.html'" scope="" onload=""></ng-include>
+    </div>
+    <div data-ng-view="" id="div-view" class="view-slide-in">
+    </div>
+    <footer id="footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-12 text-center bottom-separator">
+                    <img src="images/home/under.png" class="img-responsive inline" alt="">
+                </div>
+                <div class="col-md-4 col-sm-6">
+                    <div class="testimonial bottom">
+                        <h2>Testimonial</h2>
+                        <div class="media">
+                            <div class="pull-left">
+                                <a href="#"><img src="images/home/profile1.png" alt=""></a>
+                            </div>
+                            <div class="media-body">
+                                <blockquote>Best Idea's From Idea Block will Have a place Here</blockquote>
+                                <h3><a href="#">- Best Buddie</a></h3>
+                            </div>
+                        </div>
+                        <div class="media">
+                            <div class="pull-left">
+                                <a href="#"><img src="images/home/profile2.png" alt=""></a>
+                            </div>
+                            <div class="media-body">
+                                <blockquote>Best Idea's From Idea Block will Have a place Here</blockquote>
+                                <h3><a href="#">- Best Buddie</a></h3>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3 col-sm-6">
+                    <div class="contact-info bottom">
+                        <h2>Contacts</h2>
+                        <address>
+                            E-mail: <a href="mailto:vinod.a-ext@influencehealth.com">vinod.a-ext@influencehealth.com</a>
+                            <br> Phone: +91-9700728645
+                            <br>
+                        </address>
+                        <h2>Address</h2>
+                        <address>
+                            Best Buddie's Portal
+                        </address>
+                    </div>
+                </div>
+                <div class="col-md-4 col-sm-12 hidden">
+                    <div class="contact-form bottom">
+                        <h2>Send a message</h2>
+                        <form id="main-contact-form" name="contact-form" method="post" action="sendemail.php">
+                            <div class="form-group">
+                                <input type="text" name="name" class="form-control" required="required" placeholder="Name">
+                            </div>
+                            <div class="form-group">
+                                <input type="email" name="email" class="form-control" required="required" placeholder="Email Id">
+                            </div>
+                            <div class="form-group">
+                                <textarea name="message" id="message" required="required" class="form-control" rows="8" placeholder="Your text here"></textarea>
+                            </div>
+                            <div class="form-group">
+                                <input type="submit" name="submit" class="btn btn-submit" value="Submit">
+                            </div>
+                        </form>
+                    </div>
+                </div>
+                <div class="col-sm-12">
+                    <div class="copyright-text text-center">
+                        <p>&copy; Symphony SoftWare Pvt Ltd 2016.</p>
+                        <p>Designed by <a target="_blank" href="http://www.themeum.com">Kiss & Vinu</a></p>
+                        <a href="https://github.com/Kissvinu/BestBuddyTriangle"><p><span class="fa fa-github">Want to Support Us </span></p></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <script>
+    ! function(A, n, g, u, l, a, r) {
+        A.GoogleAnalyticsObject = l, A[l] = A[l] || function() {
+                (A[l].q = A[l].q || []).push(arguments)
+            }, A[l].l = +new Date, a = n.createElement(g),
+            r = n.getElementsByTagName(g)[0], a.src = u, r.parentNode.insertBefore(a, r)
+    }(window, document, 'script', '//www.google-analytics.com/analytics.js', 'ga');
+
+    ga('create', 'UA-XXXXX-X');
+    ga('send', 'pageview');
+    </script>
+    <!-- Google Analytics: change UA-XXXXX-X to be your site's ID -->
+    <!-- build:js(.) scripts/vendor.js -->
+    <!-- bower:js -->
+    <script type="text/javascript" src="js/jquery.js"></script>
+    <script type="text/javascript" src="js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="js/lightbox.min.js"></script>
+    <script type="text/javascript" src="js/wow.min.js"></script>
+    <script type="text/javascript" src="js/jquery.countTo.js"></script>
+     <script type="text/javascript" src="js/audio.min.js"></script>
+    <script>
+      audiojs.events.ready(function() {
+        var as = audiojs.createAll();
+      });
+    </script>
+
+    <script type="text/javascript" src="js/masonry.min.js"></script>
+    <script type="text/javascript" src="js/main.js"></script>
+    <script type="text/javascript" src="js/coundown-timer.js"></script>
+    <script type="text/javascript">
+            //Countdown js
+         $("#countdown").countdown({
+                date: "10 march 2015 12:00:00",
+                format: "on"
+            },
+            function() {
+                // callback function
+        });
+    </script>
+     <script type="text/javascript" src="http://maps.google.com/maps/api/js?sensor=true"></script>
+    <script type="text/javascript" src="js/gmaps.js"></script>
+    <script type="text/javascript" src="js/jquery.isotope.min.js"></script>
+    <script type="text/javascript" src="js/jquery.fitvids.js"></script>
+    <script type="text/javascript" src="js/holder.js"></script>
+    <script src="bower_components/jquery/dist/jquery.js"></script>
+    <script src="bower_components/angular/angular.js"></script>
+    <script src="bower_components/angular-animate/angular-animate.js"></script>
+    <script src="bower_components/angular-cookies/angular-cookies.js"></script>
+    <script src="bower_components/angular-css/angular-css.js"></script>
+    <script src="bower_components/angular-resource/angular-resource.js"></script>
+    <script src="bower_components/angular-route/angular-route.js"></script>
+    <script src="bower_components/angular-sanitize/angular-sanitize.js"></script>
+    <script src="bower_components/angular-bootstrap/ui-bootstrap.min.js"></script>
+    <script src="bower_components/angular-bootstrap/ui-bootstrap-tpls.min.js"></script>
+    <script src="bower_components/angular-touch/angular-touch.js"></script>
+    <script src="bower_components/jquery-ui/jquery-ui.js"></script>
+    <script src="bower_components/angular-ui-sortable/sortable.js"></script>
+    <script src="bower_components/angular-ui-scroll/dist/ui-scroll.js"></script>
+    <script src="bower_components/angular-ui-scrollpoint/dist/scrollpoint.js"></script>
+    <script src="bower_components/angular-ui-event/dist/event.js"></script>
+    <script src="bower_components/angular-ui-mask/dist/mask.js"></script>
+    <script src="bower_components/angular-ui-validate/dist/validate.js"></script>
+    <script src="bower_components/angular-ui-indeterminate/dist/indeterminate.js"></script>
+    <script src="bower_components/angular-ui-uploader/dist/uploader.js"></script>
+    <script src="bower_components/angular-ui-utils/index.js"></script>
+    <script src="bower_components/bootstrap-sass-official/assets/javascripts/bootstrap.js"></script>
+    <script src="bower_components/lodash/lodash.js"></script>
+    <script src="bower_components/underscore/underscore.js"></script>
+    <script src="bower_components/ng-file-upload/ng-file-upload.min.js"></script>
+    <script src="bower_components/ng-file-upload/ng-file-upload-shim.min.js"></script>
+    <script src="bower_components/bootstrap-rating-input/build/bootstrap-rating-input.min.js"></script>
+    <script src="bower_components\ngInfiniteScroll\build\ng-infinite-scroll.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.13.0/moment.min.js"></script>
+    <!-- endbower -->
+    <!-- endbuild -->
+    <!-- build:js({.tmp,app}) scripts/scripts.js -->
+    <script src="app.js"></script>
+    <script src="scripts/controllers/MainCtrl.js"></script>
+    <script src="scripts/controllers/AboutusCtrl.js"></script>
+    <script src="scripts/controllers/Aboutus2Ctrl.js"></script>
+    <script src="scripts/controllers/serviceCtrl.js"></script>
+    <script src="scripts/controllers/pricingCtrl.js"></script>
+    <script src="scripts/controllers/contactCtrl.js"></script>
+    <script src="scripts/controllers/contact2Ctrl.js"></script>
+    <script src="scripts/controllers/404Ctrl.js"></script>
+    <script src="scripts/controllers/coming-soonCtrl.js"></script>
+    <script src="scripts/controllers/blogCtrl.js"></script>
+    <script src="scripts/controllers/blogtwoCtrl.js"></script>
+    <script src="scripts/controllers/blogoneCtrl.js"></script>
+    <script src="scripts/controllers/blogthreeCtrl.js"></script>
+    <script src="scripts/controllers/blogfourCtrl.js"></script>
+    <script src="scripts/controllers/blogdetailsCtrl.js"></script>
+    <script src="scripts/controllers/portfolioCtrl.js"></script>
+    <script src="scripts/controllers/portfoliofourCtrl.js"></script>
+    <script src="scripts/controllers/portfoliooneCtrl.js"></script>
+    <script src="scripts/controllers/portfoliotwoCtrl.js"></script>
+    <script src="scripts/controllers/portfoliothreeCtrl.js"></script>
+    <script src="scripts/controllers/portfolio-detailsCtrl.js"></script>
+    <script src="scripts/controllers/shortcodesCtrl.js"></script>
+    <script src="scripts\controllers\DashBoardCtrl.js"></script>
+    <script src="scripts\controllers\ideaViewCtrl.js"></script>
+    <script src="scripts\controllers\ideaInsertCtrl.js"></script>
+    <script src="scripts\controllers\dumshellCtrl.js"></script>
+    <!-- endbuild -->
+</body>
+
+</html>

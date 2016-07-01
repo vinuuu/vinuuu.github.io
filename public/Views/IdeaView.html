@@ -1,0 +1,193 @@
+<div ng-controller="ideaCrtl" >
+  <section id="page-breadcrumb">
+    <div class="vertical-center sun">
+        <div class="container">
+            <div class="row">
+                <div class="action">
+                    <div class="col-sm-12">
+                        <a href="#/IdeaInsert"><h1 class="title">Stick Your  Idea Here</h1></a>
+                        <p>Be Creative</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<section id="projects" class="padding-top">
+    <div class="container">
+
+        <div class="row">
+            <div class="col-md-3 col-sm-4">
+                <div class="sidebar portfolio-sidebar">
+                    <div class="sidebar-item categories">
+                        <h3>Grouped By Dates </h3>
+                        <ul class="nav navbar-stacked">
+                            <li class="active" ng-repeat="li in TotalDirectories"><a href="" ng-click="abc(li)">{{li|dateAgo}}</li>
+                        </ul>
+                    </div>
+                    <div class="sidebar-item hidden  recent">
+                        <h3>Recent Projects</h3>
+                        <div class="media">
+                            <div class="pull-left">
+                                <a href="#/"><img src="images/portfolio/project1.jpg" alt=""></a>
+                            </div>
+                            <div class="media-body">
+                                <h4><a href="#/">Lorem ipsum dolor sit amet consectetur adipisicing elit,</a></h4>
+                                <p>posted on 07 March 2014</p>
+                            </div>
+                        </div>
+                        <div class="media">
+                            <div class="pull-left">
+                                <a href="#/"><img src="images/portfolio/project2.jpg" alt=""></a>
+                            </div>
+                            <div class="media-body">
+                                <h4><a href="#/">Lorem ipsum dolor sit amet consectetur adipisicing elit,</a></h4>
+                                <p>posted on 07 March 2014</p>
+                            </div>
+                        </div>
+                        <div class="media">
+                            <div class="pull-left">
+                                <a href="#/"><img src="images/portfolio/project3.jpg" alt=""></a>
+                            </div>
+                            <div class="media-body">
+                                <h4><a href="#/">Lorem ipsum dolor sit amet consectetur adipisicing elit,</a></h4>
+                                <p>posted on 07 March 2014</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="sidebar-item hidden popular">
+                        <h3>Popular Projects</h3>
+                        <ul class="gallery">
+                            <li>
+                                <a href="#/"><img src="images/portfolio/popular1.jpg" alt=""></a>
+                            </li>
+                            <li>
+                                <a href="#/"><img src="images/portfolio/popular2.jpg" alt=""></a>
+                            </li>
+                            <li>
+                                <a href="#/"><img src="images/portfolio/popular3.jpg" alt=""></a>
+                            </li>
+                            <li>
+                                <a href="#/"><img src="images/portfolio/popular4.jpg" alt=""></a>
+                            </li>
+                            <li>
+                                <a href="#/"><img src="images/portfolio/popular5.jpg" alt=""></a>
+                            </li>
+                            <li>
+                                <a href="#/"><img src="images/portfolio/popular1.jpg" alt=""></a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-9 col-sm-8">
+                <div class="row">
+                    <div class="portfolio-items" id="IDeaview">
+                      <span>'sfsdfsd' {{aaa}}</span>
+<ul >
+   <li ng-repeat="item in totalideadata|filter:{date:aaa} track by $index">
+      <a>
+        <h2>{{item.name}} #{{$index+1}}</h2>
+        <p>{{item.idea}}</p>
+      </a>
+    </li>
+  </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+</section>
+
+  </div>
+  <link  href="http://fonts.googleapis.com/css?family=Reenie+Beanie:regular" rel="stylesheet" type="text/css">
+<style type="text/css">
+*{
+  margin:0;
+  padding:0;
+}
+#IDeaview{
+  font-family:arial,sans-serif;
+  font-size:100%;
+
+  color:#fff;
+}
+#IDeaview>h2,p{
+  font-size:100%;
+  font-weight:normal;
+}
+#IDeaview>ul,li{
+  list-style:none;
+}
+#IDeaview>ul{
+  overflow:hidden;
+  padding:3em;
+}
+#IDeaview>ul li a{
+  text-decoration:none;
+  color:#000;
+  background:#ffc;
+  display:block;
+  height:15em;
+  width:15em;
+  padding:1em;
+  -moz-box-shadow:5px 5px 7px rgba(33,33,33,1);
+  -webkit-box-shadow: 5px 5px 7px rgba(33,33,33,.7);
+  box-shadow: 5px 5px 7px rgba(33,33,33,.7);
+  -moz-transition:-moz-transform .15s linear;
+  -o-transition:-o-transform .15s linear;
+  -webkit-transition:-webkit-transform .15s linear;
+}
+#IDeaview>ul li{
+  margin:1em;
+  float:left;
+}
+#IDeaview>ul li h2{
+  font-size:140%;
+  font-weight:bold;
+  padding-bottom:10px;
+}
+#IDeaview>ul li p{
+  font-family:"Reenie Beanie",arial,sans-serif;
+  font-size:180%;
+}
+#IDeaview>ul li a{
+  -webkit-transform: rotate(-6deg);
+  -o-transform: rotate(-6deg);
+  -moz-transform:rotate(-6deg);
+}
+#IDeaview>ul li:nth-child(even) a{
+  -o-transform:rotate(4deg);
+  -webkit-transform:rotate(4deg);
+  -moz-transform:rotate(4deg);
+  position:relative;
+  top:5px;
+  background:#cfc;
+}
+#IDeaview ul li:nth-child(3n) a{
+  -o-transform:rotate(-3deg);
+  -webkit-transform:rotate(-3deg);
+  -moz-transform:rotate(-3deg);
+  position:relative;
+  top:-5px;
+  background:#ccf;
+}
+#IDeaview>ul li:nth-child(5n) a{
+  -o-transform:rotate(5deg);
+  -webkit-transform:rotate(5deg);
+  -moz-transform:rotate(5deg);
+  position:relative;
+  top:-10px;
+}
+#IDeaview ul li a:hover,#IDeaview ul li a:focus{
+  box-shadow:10px 10px 7px rgba(0,0,0,.7) !important;
+  -moz-box-shadow:10px 10px 7px rgba(0,0,0,.7) !important;
+  -webkit-box-shadow: 10px 10px 7px rgba(0,0,0,.7) !important;
+  -webkit-transform: scale(1.25) !important;
+  -moz-transform: scale(1.25) !important;
+  -o-transform: scale(1.25) !important;
+  position:relative;
+  z-index:5;
+}
+
+
+</style>

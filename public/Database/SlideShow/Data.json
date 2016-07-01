@@ -1,0 +1,39 @@
+{
+    "data": [
+        {
+            "ID": "1",
+            "SlideHeading": "FriDay Fun On 24th June",
+            "SlideCaption": "We are planning To intiatite the Friday Fun on June 24TH"
+        },
+        {
+            "ID": "2",
+            "SlideHeading": "Our Own Memories",
+            "SlideCaption": "Place where You can Find our Memories",
+            "Href":"#gallery",
+            "ButtonName":"Browse Gallery"
+        },
+        {
+            "ID": "3",
+            "SlideHeading": "Our Own Instagram",
+            "SlideCaption": "Fun Fans Parties Everything Anything ",
+            "Href":"#gallery",
+            "ButtonName":"Browse Gallery"
+        }
+        ,
+        {
+            "ID": "4",
+            "SlideHeading": "Feed us Back",
+            "SlideCaption": "Want to Tell something ,Put it on a Stick Note we love to Have your Idea",
+            "Href":"#IdeaInsert",
+            "ButtonName":"FeedBack"
+        }
+        ,
+        {
+            "ID": "5",
+            "SlideHeading": "View Other Idea's",
+            "SlideCaption": "Check Out the Best Ideas we Got For You",
+            "Href":"#idea",
+            "ButtonName":"Idea Stickers"
+        }
+    ]
+}
